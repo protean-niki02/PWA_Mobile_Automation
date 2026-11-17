@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    Sprint 3 - BD2M-770 (Customer Creation & other functionality) test cases, on Android and on iOS.
+    Module: Policy Detail Screen -> OVD (My Policies - Policy Details Screen, Mobile)
+
+    Each test needs policies.mobileNumber + policies.otp (a customer with an active motor policy and a fixed UAT OTP)
+    in src/test/resources/config.properties, or policyDetails.startUrl; without them the tests are SKIPPED.
+
+    Eclipse: right-click this file > Run As > TestNG Suite (needs the TestNG plugin)
+    Maven:   mvn test "-Dsuite=testng-sprint3-bd2m-770.xml"
+    To leave a TC out, comment out its <class> line; to leave a platform out, comment out its <test>.
+-->
+<suite name="Sprint 3 - BD2M-770" verbose="1">
+
+    <test name="SC_01 Policy Detail Screen -> OVD - Android">
+        <parameter name="device" value="android"/>
+        <classes>
+            <class name="tests.sprint3.bd2m_770.SC01_TC001_PolicyDetailsOpensFromCardTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC002_GradientHeaderTitleAndBackChevronTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC003_BackChevronNavigatesBackTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC004_SummaryCardInsurerLogoTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC005_SummaryCardProductNameTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC006_SummaryCardActiveStatusBadgeTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC007_SummaryCardExpandCaretTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC008_SummaryCardContactInsurerButtonTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC009_SummaryCardPolicyCopyButtonTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC010_ThreeSegmentTabStripTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC011_BottomNavigationMyPoliciesActiveTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC012_QuickFactsPolicyProposalIdvTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC013_PolicyInformationDatesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC014_PolicyInformationInsuredDeclaredValueTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC015_ProductDetailsSubBlockTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC016_CarOwnerDetailsFieldsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC017_CarOwnerBankDetailsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC018_NomineesNumberedDetailsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC019_NomineeBankDetailsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC020_NomineeAppointeeBlockTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC021_PolicyDetailsTabMatchesFigmaTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC022_CarDetailsFieldsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC023_RegistrationCityLabelTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC024_RegistrationDateLabelTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC025_VehicleDetailsTabMatchesFigmaTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC026_BaseCoverageFieldsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC027_PersonalAccidentCoverGroupTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC028_AddOnsGroupTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC029_AdditionalOwnDamageGroupTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC030_AdditionalThirdPartyGroupTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC031_CoverageItemPremiumPaidTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC032_CoveragePremiumTabMatchesFigmaTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC033_SwitchPolicyToVehicleTabTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC034_SwitchVehicleToCoverageTabTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC035_SwitchCoverageToPolicyTabTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC036_ActiveTabFillAndTextTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC037_InactiveTabsDefaultStylingTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC038_TabSwitchingOnlyInteractionTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC039_PolicySummaryCardExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC040_PolicyInformationExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC041_CarOwnerDetailsExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC042_NomineesExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC043_CarDetailsExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC044_BaseCoverageExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC045_AddOnCoversExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC046_AddOnCoversViewLessViewMoreTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC047_ExpandCollapseIsLocalUiStateTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC048_ContactInsurerNoActionTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC049_ContactInsurerNoCrashTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC050_PolicyCopyNoActionTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC051_PolicyCopyNoCrashTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC052_PhoneEyeIconNoActionTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC053_PhoneEyeIconNoCrashTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC054_BackChevronNoLivePoliciesListTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC055_ReadOnlyRowsMatchFigmaTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC056_SubBlockHeadersTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC057_NumberedListsStylingTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC058_CoverageItemCardsStylingTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC059_LayoutAcrossDeviceSizesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC060_LongContentScrollsOnEachTabTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC061_BottomNavigationStaysPinnedTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC062_NoContentClippedTest"/>
+        </classes>
+    </test>
+
+    <test name="SC_01 Policy Detail Screen -> OVD - iOS">
+        <parameter name="device" value="ios"/>
+        <classes>
+            <class name="tests.sprint3.bd2m_770.SC01_TC001_PolicyDetailsOpensFromCardTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC002_GradientHeaderTitleAndBackChevronTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC003_BackChevronNavigatesBackTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC004_SummaryCardInsurerLogoTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC005_SummaryCardProductNameTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC006_SummaryCardActiveStatusBadgeTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC007_SummaryCardExpandCaretTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC008_SummaryCardContactInsurerButtonTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC009_SummaryCardPolicyCopyButtonTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC010_ThreeSegmentTabStripTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC011_BottomNavigationMyPoliciesActiveTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC012_QuickFactsPolicyProposalIdvTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC013_PolicyInformationDatesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC014_PolicyInformationInsuredDeclaredValueTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC015_ProductDetailsSubBlockTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC016_CarOwnerDetailsFieldsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC017_CarOwnerBankDetailsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC018_NomineesNumberedDetailsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC019_NomineeBankDetailsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC020_NomineeAppointeeBlockTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC021_PolicyDetailsTabMatchesFigmaTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC022_CarDetailsFieldsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC023_RegistrationCityLabelTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC024_RegistrationDateLabelTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC025_VehicleDetailsTabMatchesFigmaTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC026_BaseCoverageFieldsTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC027_PersonalAccidentCoverGroupTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC028_AddOnsGroupTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC029_AdditionalOwnDamageGroupTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC030_AdditionalThirdPartyGroupTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC031_CoverageItemPremiumPaidTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC032_CoveragePremiumTabMatchesFigmaTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC033_SwitchPolicyToVehicleTabTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC034_SwitchVehicleToCoverageTabTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC035_SwitchCoverageToPolicyTabTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC036_ActiveTabFillAndTextTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC037_InactiveTabsDefaultStylingTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC038_TabSwitchingOnlyInteractionTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC039_PolicySummaryCardExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC040_PolicyInformationExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC041_CarOwnerDetailsExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC042_NomineesExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC043_CarDetailsExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC044_BaseCoverageExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC045_AddOnCoversExpandsAndCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC046_AddOnCoversViewLessViewMoreTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC047_ExpandCollapseIsLocalUiStateTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC048_ContactInsurerNoActionTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC049_ContactInsurerNoCrashTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC050_PolicyCopyNoActionTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC051_PolicyCopyNoCrashTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC052_PhoneEyeIconNoActionTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC053_PhoneEyeIconNoCrashTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC054_BackChevronNoLivePoliciesListTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC055_ReadOnlyRowsMatchFigmaTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC056_SubBlockHeadersTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC057_NumberedListsStylingTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC058_CoverageItemCardsStylingTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC059_LayoutAcrossDeviceSizesTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC060_LongContentScrollsOnEachTabTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC061_BottomNavigationStaysPinnedTest"/>
+            <class name="tests.sprint3.bd2m_770.SC01_TC062_NoContentClippedTest"/>
+        </classes>
+    </test>
+
+</suite>

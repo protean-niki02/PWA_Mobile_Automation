@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    Sprint 3 - BD2M-761 - 4 Wheeler - Quotes Listing / Product Comparison (SC_01_TC_001 - 034), on Android and on iOS.
+    Module: Customer Creation & other functionality (US-UCM-01)
+
+    A suite of its own: its TC IDs (SC_01_TC_001 ...) are the same as the Review Car TCs in
+    testng-sprint3.xml, and reports group results by TC ID.
+
+    Test data (src/test/resources/config.properties):
+      fourWheeler.registrationNumber        - the car whose quotes are listed
+      quotes.updatedIdv                     - SC_01_TC_008, when the IDV is typed in
+      quotes.noQuotesRegistrationNumber     - SC_01_TC_026, a car no insurer quotes for
+    Approved designs (SC_01_TC_033): src/test/resources/approved-design/quotes-listing/
+    Tests whose data is missing are SKIPPED.
+
+    Eclipse: right-click this file > Run As > TestNG Suite (needs the TestNG plugin)
+    Maven:   mvn test "-Dsuite=testng-sprint3-quotes-listing.xml"
+    One TC:  mvn test "-Dtest=SC01_TC001_QuotesFetchedForSelectedVehicleTest" "-Ddevice=android"   (or ios)
+-->
+<suite name="Sprint 3 - BD2M-761 Quotes Listing" verbose="1">
+
+    <test name="SC_01 4 Wheeler - Quotes Listing / Product Comparison - Android">
+        <parameter name="device" value="android"/>
+        <classes>
+            <class name="tests.sprint3.bd2m_761.SC01_TC001_QuotesFetchedForSelectedVehicleTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC002_QuotesSummaryMakeAndModelTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC003_QuotesSummaryFuelTypeTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC004_QuotesSummaryVariantTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC005_QuotesSummaryOwnershipTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC006_CarDetailsEditNavigatesTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC007_QuotesIdvEditableTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC008_QuotesIdvChangeRefetchesTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC009_QuotesTenureEditableTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC010_QuotesTenureChangeRefetchesTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC011_QuotesAddOnChipRemovableTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC012_RemoveAddOnChipUpdatesPremiumsTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC013_QuoteCardInsurerLogoNameTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC014_QuoteCardInstantIssuanceTagTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC015_QuoteCardMetricsTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC016_QuoteCardIdvTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC017_QuoteCardPremiumTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC018_QuoteCardProductDetailsTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC019_QuoteCardViewBreakupTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC020_QuoteCardPremiumButtonProceedsTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC021_QuotesAddOnsPanelTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC022_QuotesSortPanelTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC023_QuotesFiltersPanelTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC024_QuotesDontWishToProceedTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC025_QuotesLoadingStateTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC026_QuotesEmptyStateTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC027_QuotesLoadErrorTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC028_QuotesHeaderElementsTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC029_QuotesBackArrowTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC030_QuotesCloseExitsFlowTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC031_QuotesTitleHighlightTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC032_QuotesTitleReflectsSortTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC033_QuotesMatchesDesignAcrossSizesTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC034_QuotesListScrollsWithPinnedBarTest"/>
+        </classes>
+    </test>
+
+    <test name="SC_01 4 Wheeler - Quotes Listing / Product Comparison - iOS">
+        <parameter name="device" value="ios"/>
+        <classes>
+            <class name="tests.sprint3.bd2m_761.SC01_TC001_QuotesFetchedForSelectedVehicleTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC002_QuotesSummaryMakeAndModelTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC003_QuotesSummaryFuelTypeTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC004_QuotesSummaryVariantTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC005_QuotesSummaryOwnershipTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC006_CarDetailsEditNavigatesTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC007_QuotesIdvEditableTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC008_QuotesIdvChangeRefetchesTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC009_QuotesTenureEditableTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC010_QuotesTenureChangeRefetchesTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC011_QuotesAddOnChipRemovableTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC012_RemoveAddOnChipUpdatesPremiumsTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC013_QuoteCardInsurerLogoNameTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC014_QuoteCardInstantIssuanceTagTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC015_QuoteCardMetricsTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC016_QuoteCardIdvTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC017_QuoteCardPremiumTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC018_QuoteCardProductDetailsTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC019_QuoteCardViewBreakupTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC020_QuoteCardPremiumButtonProceedsTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC021_QuotesAddOnsPanelTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC022_QuotesSortPanelTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC023_QuotesFiltersPanelTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC024_QuotesDontWishToProceedTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC025_QuotesLoadingStateTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC026_QuotesEmptyStateTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC027_QuotesLoadErrorTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC028_QuotesHeaderElementsTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC029_QuotesBackArrowTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC030_QuotesCloseExitsFlowTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC031_QuotesTitleHighlightTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC032_QuotesTitleReflectsSortTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC033_QuotesMatchesDesignAcrossSizesTest"/>
+            <class name="tests.sprint3.bd2m_761.SC01_TC034_QuotesListScrollsWithPinnedBarTest"/>
+        </classes>
+    </test>
+
+</suite>

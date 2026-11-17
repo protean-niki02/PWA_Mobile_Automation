@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- PWA installability checks. Run with: mvn test -Dsuite=testng-pwa.xml -->
+<suite name="PWA Compliance">
+
+    <test name="Mobile">
+        <parameter name="device" value="android"/>
+        <classes>
+            <class name="tests.PwaComplianceTest"/>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    Sprint 3 - BD2M-767 (Customer Creation & other functionality) test cases, on Android and on iOS.
+    Module: 4 Wheeler - Confirm Plan / Add-ons Configuration
+
+    Each test opens the quotes listing for fourWheeler.registrationNumber (config.properties) and
+    taps the first quote card's premium button to reach Confirm Plan.
+
+    Eclipse: right-click this file > Run As > TestNG Suite (needs the TestNG plugin)
+    Maven:   mvn test "-Dsuite=testng-sprint3-bd2m-767.xml"
+    To leave a TC out, comment out its <class> line; to leave a platform out, comment out its <test>.
+-->
+<suite name="Sprint 3 - BD2M-767" verbose="1">
+
+    <test name="SC_01 4 Wheeler - Confirm Plan / Add-ons Configuration - Android">
+        <parameter name="device" value="android"/>
+        <classes>
+            <class name="tests.sprint3.bd2m_767.SC01_TC001_SummaryInsurerTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC002_SummaryMetricsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC003_SummaryIdvTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC004_SummaryFinalPremiumTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC005_SummaryProductDetailsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC006_BasePlanExpandsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC007_BasePlanCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC008_OwnDamageEventsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC009_OwnDamageEventsCountTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC010_ThirdPartyDescriptionTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC011_CoverPremiumTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC012_CoverTitleTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC013_CoverTruncatedDescriptionTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC014_CoverMoreExpandsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC015_CoverSelectControlTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC016_PersonalAccidentGroupTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC017_AddOnGroupTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC018_AdditionalOwnDamageGroupTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC019_AdditionalThirdPartyGroupTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC020_PreselectedCoversTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC021_MandatoryCoverNotDeselectableTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC022_MandatoryCoverIndicatedTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC023_SelectCoverUpdatesPremiumTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC024_DeselectCoverUpdatesPremiumTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC025_ViewBreakupTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC026_BreakupReflectsSelectionsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC027_TagsBadgesTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC028_IndicativePremiumTagTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC029_InfoIconTooltipTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC030_ConfirmPlanEnabledTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC031_ConfirmPlanProceedsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC032_BackArrowToQuotesTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC033_CloseExitsFlowTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC034_LoadingStateTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC035_RecalculationErrorTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC036_HeaderTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC037_TitleHighlightTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC038_DesignTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC039_ScrollConfirmPinnedTest"/>
+        </classes>
+    </test>
+
+    <test name="SC_01 4 Wheeler - Confirm Plan / Add-ons Configuration - iOS">
+        <parameter name="device" value="ios"/>
+        <classes>
+            <class name="tests.sprint3.bd2m_767.SC01_TC001_SummaryInsurerTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC002_SummaryMetricsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC003_SummaryIdvTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC004_SummaryFinalPremiumTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC005_SummaryProductDetailsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC006_BasePlanExpandsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC007_BasePlanCollapsesTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC008_OwnDamageEventsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC009_OwnDamageEventsCountTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC010_ThirdPartyDescriptionTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC011_CoverPremiumTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC012_CoverTitleTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC013_CoverTruncatedDescriptionTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC014_CoverMoreExpandsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC015_CoverSelectControlTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC016_PersonalAccidentGroupTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC017_AddOnGroupTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC018_AdditionalOwnDamageGroupTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC019_AdditionalThirdPartyGroupTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC020_PreselectedCoversTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC021_MandatoryCoverNotDeselectableTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC022_MandatoryCoverIndicatedTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC023_SelectCoverUpdatesPremiumTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC024_DeselectCoverUpdatesPremiumTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC025_ViewBreakupTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC026_BreakupReflectsSelectionsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC027_TagsBadgesTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC028_IndicativePremiumTagTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC029_InfoIconTooltipTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC030_ConfirmPlanEnabledTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC031_ConfirmPlanProceedsTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC032_BackArrowToQuotesTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC033_CloseExitsFlowTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC034_LoadingStateTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC035_RecalculationErrorTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC036_HeaderTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC037_TitleHighlightTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC038_DesignTest"/>
+            <class name="tests.sprint3.bd2m_767.SC01_TC039_ScrollConfirmPinnedTest"/>
+        </classes>
+    </test>
+</suite>

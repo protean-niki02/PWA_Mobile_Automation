@@ -1,0 +1,16 @@
+# Build output
+/target/
+/bin/
+
+# Test evidence: screenshots, videos, traces, HAR files (several GB, can hold session data)
+/test-evidence/
+
+# BrowserStack SDK logs and the real credentials file (copy browserstack.yml.example to browserstack.yml)
+/log/
+/browserstack.yml
+/local.log
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+*.log

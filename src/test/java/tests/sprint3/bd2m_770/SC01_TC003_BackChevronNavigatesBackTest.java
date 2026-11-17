@@ -1,0 +1,31 @@
+package tests.sprint3.bd2m_770;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+/**
+ * SC_01_TC_003 - Verify that the customer is able to navigate back using the back chevron on the header.
+ *
+ * Sprint:        Sprint 3 - BD2M-770
+ * Module:        Policy Detail Screen -&gt; OVD (My Policies - Policy Details Screen, Mobile)
+ * Requirement:   US-UCM-01, designed by Sumit
+ * Scenario:      Validate the "Shared Shell &amp; Screen Layout" functionality.
+ * Pre-requisite: Customer logged in &amp; has an active motor policy &amp; has opened the Policy Details screen from a
+ *                policy card in My Policies.
+ * Test data:     Not applicable
+ * Steps:         Navigate to the Policy Details screen &amp; tap the back chevron on the header.
+ * Expected:      Customer should be navigated back from the Policy Details screen.
+ * Type:          Positive, Status in the sheet: Pass
+ *
+ * Runs once {@code policies.mobileNumber} and {@code policies.otp} (or {@code policyDetails.startUrl}) are set, see {@link PolicyDetailsTestBase}.
+ */
+public class SC01_TC003_BackChevronNavigatesBackTest extends PolicyDetailsTestBase {
+
+    @Test(groups = {"sprint3", "SC_01", "bd2m_770", "regression"},
+        description = "SC_01_TC_003: Verify that the customer is able to navigate back using the back chevron on the header.")
+    public void verifyBackChevronNavigatesBack() {
+        openPolicyDetails();
+        pressControl(backControl(), "back chevron");
+        Assert.assertFalse(shows(TAB_VEHICLE), "The Policy Details screen is still shown after tapping the back chevron");
+    }
+}

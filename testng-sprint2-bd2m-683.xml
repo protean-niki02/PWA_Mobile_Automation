@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+    Sprint 2 - BD2M-683: Validate the "Splash Screen" functionality, on Android and on iOS.
+    Module: Customer Creation & other functionality (US-UCM-01)
+
+    A suite of its own: its TC IDs (SC_01_TC_001 ...) are the same as the 4 Wheeler module's in
+    testng-sprint3.xml (BD2M-761), and reports group results by TC ID.
+
+    Test data: splash.* in src/test/resources/config.properties - tests without their data are SKIPPED.
+    Approved Figma design (SC_01_TC_020): src/test/resources/approved-design/splash-screen-bd2m-683/
+
+    Eclipse: right-click this file > Run As > TestNG Suite (needs the TestNG plugin)
+    Maven:   mvn test "-Dsuite=testng-sprint2-bd2m-683.xml"
+    One TC:  mvn test "-Dtest=SC01_TC001_GridAutoScrollsTest" "-Ddevice=android"   (or ios)
+-->
+<suite name="Sprint 2 - BD2M-683 Splash Screen" verbose="1">
+
+    <test name="BD2M-683 SC_01 Splash Screen - Android">
+        <parameter name="device" value="android"/>
+        <classes>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC001_GridAutoScrollsTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC002_GridLoopsSeamlesslyTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC003_GridScrollSpeedConsistentTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC004_GridDoesNotBlockInteractionTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC005_GridNoJankTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC006_GridPausesInBackgroundTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC007_GridResumesInForegroundTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC008_BrandLogoDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC009_WelcomeHeadingDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC010_TaglineDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC011_SupportLineDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC012_IllustrationDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC013_ActionButtonsDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC014_PrimaryButtonLabelTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC015_PrimaryButtonNavigationTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC016_SecondaryButtonLabelTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC017_SecondaryButtonNavigationTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC018_SafeAreasNoClippingTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC019_LayoutAcrossDeviceSizesTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC020_MatchesFigmaDesignTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC021_BackgroundVectorShapeTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC022_GridImagesLoadFromSourceTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC023_GridImageFailureFallbackTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC024_GridMarkedDecorativeTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC025_ActionButtonsAccessibleLabelsTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC026_ActionButtonsTouchTargetTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC027_GridRespectsReducedMotionTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC028_SplashRendersCorrectlyTest"/>
+        </classes>
+    </test>
+
+    <test name="BD2M-683 SC_01 Splash Screen - iOS">
+        <parameter name="device" value="ios"/>
+        <classes>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC001_GridAutoScrollsTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC002_GridLoopsSeamlesslyTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC003_GridScrollSpeedConsistentTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC004_GridDoesNotBlockInteractionTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC005_GridNoJankTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC006_GridPausesInBackgroundTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC007_GridResumesInForegroundTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC008_BrandLogoDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC009_WelcomeHeadingDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC010_TaglineDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC011_SupportLineDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC012_IllustrationDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC013_ActionButtonsDisplayedTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC014_PrimaryButtonLabelTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC015_PrimaryButtonNavigationTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC016_SecondaryButtonLabelTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC017_SecondaryButtonNavigationTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC018_SafeAreasNoClippingTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC019_LayoutAcrossDeviceSizesTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC020_MatchesFigmaDesignTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC021_BackgroundVectorShapeTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC022_GridImagesLoadFromSourceTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC023_GridImageFailureFallbackTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC024_GridMarkedDecorativeTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC025_ActionButtonsAccessibleLabelsTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC026_ActionButtonsTouchTargetTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC027_GridRespectsReducedMotionTest"/>
+            <class name="tests.sprint2.bd2m_683_splash_screen.SC01_TC028_SplashRendersCorrectlyTest"/>
+        </classes>
+    </test>
+
+</suite>
